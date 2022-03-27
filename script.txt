@@ -1,0 +1,18 @@
+comentario = ['muito bom!', '+1 inscrito', 'melhor video haha']
+
+placeholder = document.querySelector('#placeholder-area')
+placeholder.click()
+
+setInterval(() => {
+
+input_comentario = document.querySelector('#contenteditable-root')
+n = Math.round(Math.random() * (comentario.length - 1))
+input_comentario.innerText = comentario[n]
+
+setTimeout(() => {
+botao_enviar = document.querySelector('#submit-button')
+botao_enviar.removeAttribute('disabled')
+botao_enviar.click()
+
+}, 1000)
+}, 5000)
